@@ -1,0 +1,1609 @@
+Program.Sub.ScreenSU.Start
+gui.SS_Form1..create
+gui.SS_Form1..caption("Quote Dashboard")
+gui.SS_Form1..size(21930,13860)
+gui.SS_Form1..minx(0)
+gui.SS_Form1..miny(0)
+gui.SS_Form1..position(0,0)
+gui.SS_Form1..event(unload,ss_form1_unload)
+gui.SS_Form1..alwaysontop(False)
+gui.SS_Form1..fontname("Arial")
+gui.SS_Form1..fontsize(8)
+gui.SS_Form1..forecolor(0)
+gui.SS_Form1..fontstyle(,,,,)
+gui.SS_Form1..BackColor(-2147483633)
+gui.SS_Form1..controlbox(True)
+gui.SS_Form1..maxbutton(False)
+gui.SS_Form1..minbutton(False)
+gui.SS_Form1..mousepointer(0)
+gui.SS_Form1..moveable(True)
+gui.SS_Form1..sizeable(False)
+gui.SS_Form1..ShowInTaskBar(True)
+gui.SS_Form1..titlebar(True)
+gui.SS_Form1.lbl_txtSalesman.create(label,"Salesperson",True,1500,300,1,105,1515,True,0,MicrosoftSansSerif,8,-2147483633,0)
+gui.SS_Form1.lbl_txtSalesman.defaultvalue("")
+gui.SS_Form1.lbl_txtSalesman.controlgroup(0)
+gui.SS_Form1.txtSalesman.create(textbox,"",True,1800,330,0,100,1785,True,0,Arial,8,16777215,1)
+gui.SS_Form1.txtSalesman.maxLength(3)
+gui.SS_Form1.txtSalesman.defaultvalue("")
+gui.SS_Form1.txtSalesman.controlgroup(0)
+gui.SS_Form1.cmd_txtSalesman.create(button)
+gui.SS_Form1.cmd_txtSalesman.caption("^")
+gui.SS_Form1.cmd_txtSalesman.visible(True)
+gui.SS_Form1.cmd_txtSalesman.size(330,330)
+gui.SS_Form1.cmd_txtSalesman.zorder(0)
+gui.SS_Form1.cmd_txtSalesman.position(1995,1785)
+gui.SS_Form1.cmd_txtSalesman.enabled(True)
+gui.SS_Form1.cmd_txtSalesman.fontname("Arial")
+gui.SS_Form1.cmd_txtSalesman.fontsize(8)
+gui.SS_Form1.cmd_txtSalesman.event(click,cmd_txtsalesman_click)
+gui.SS_Form1.cmd_txtSalesman.defaultvalue("")
+gui.SS_Form1.cmd_txtSalesman.controlgroup(0)
+gui.SS_Form1.lbl_txtLoc.create(label,"Location",True,1680,210,1,105,4515,True,0,Arial,8,-2147483633,0)
+gui.SS_Form1.lbl_txtLoc.defaultvalue("")
+gui.SS_Form1.lbl_txtLoc.controlgroup(0)
+gui.SS_Form1.txtLoc.create(textbox,"",True,1800,330,0,105,4725,True,0,Arial,8,16777215,1)
+gui.SS_Form1.txtLoc.maxLength(2)
+gui.SS_Form1.txtLoc.defaultvalue("")
+gui.SS_Form1.txtLoc.controlgroup(0)
+gui.SS_Form1.cmdAddS.create(button)
+gui.SS_Form1.cmdAddS.caption("Add")
+gui.SS_Form1.cmdAddS.visible(True)
+gui.SS_Form1.cmdAddS.size(1005,360)
+gui.SS_Form1.cmdAddS.zorder(0)
+gui.SS_Form1.cmdAddS.position(2415,1785)
+gui.SS_Form1.cmdAddS.enabled(True)
+gui.SS_Form1.cmdAddS.fontname("Arial")
+gui.SS_Form1.cmdAddS.fontsize(8)
+gui.SS_Form1.cmdAddS.event(click,cmdadds_click)
+gui.SS_Form1.cmdAddS.defaultvalue("")
+gui.SS_Form1.cmdAddS.controlgroup(0)
+gui.SS_Form1.cmdDeleteS.create(button)
+gui.SS_Form1.cmdDeleteS.caption("Remove")
+gui.SS_Form1.cmdDeleteS.visible(True)
+gui.SS_Form1.cmdDeleteS.size(1005,360)
+gui.SS_Form1.cmdDeleteS.zorder(0)
+gui.SS_Form1.cmdDeleteS.position(2415,2205)
+gui.SS_Form1.cmdDeleteS.enabled(True)
+gui.SS_Form1.cmdDeleteS.fontname("Arial")
+gui.SS_Form1.cmdDeleteS.fontsize(8)
+gui.SS_Form1.cmdDeleteS.event(click,cmddeletes_click)
+gui.SS_Form1.cmdDeleteS.defaultvalue("")
+gui.SS_Form1.cmdDeleteS.controlgroup(0)
+gui.SS_Form1.cmdAddL.create(button)
+gui.SS_Form1.cmdAddL.caption("Add")
+gui.SS_Form1.cmdAddL.visible(True)
+gui.SS_Form1.cmdAddL.size(1005,360)
+gui.SS_Form1.cmdAddL.zorder(0)
+gui.SS_Form1.cmdAddL.position(2520,4725)
+gui.SS_Form1.cmdAddL.enabled(True)
+gui.SS_Form1.cmdAddL.fontname("Arial")
+gui.SS_Form1.cmdAddL.fontsize(8)
+gui.SS_Form1.cmdAddL.event(click,cmdaddl_click)
+gui.SS_Form1.cmdAddL.defaultvalue("")
+gui.SS_Form1.cmdAddL.controlgroup(0)
+gui.SS_Form1.cmdDeleteL.create(button)
+gui.SS_Form1.cmdDeleteL.caption("Remove")
+gui.SS_Form1.cmdDeleteL.visible(True)
+gui.SS_Form1.cmdDeleteL.size(1005,360)
+gui.SS_Form1.cmdDeleteL.zorder(0)
+gui.SS_Form1.cmdDeleteL.position(2520,5145)
+gui.SS_Form1.cmdDeleteL.enabled(True)
+gui.SS_Form1.cmdDeleteL.fontname("Arial")
+gui.SS_Form1.cmdDeleteL.fontsize(8)
+gui.SS_Form1.cmdDeleteL.event(click,cmddeletel_click)
+gui.SS_Form1.cmdDeleteL.defaultvalue("")
+gui.SS_Form1.cmdDeleteL.controlgroup(0)
+gui.SS_Form1.lvwSalesman.create(listview)
+gui.SS_Form1.lvwSalesman.view(3)
+gui.SS_Form1.lvwSalesman.addlistviewcolumn("Salesman",2150,0)
+gui.SS_Form1.lvwSalesman.visible(True)
+gui.SS_Form1.lvwSalesman.size(2250,1995)
+gui.SS_Form1.lvwSalesman.zorder(0)
+gui.SS_Form1.lvwSalesman.position(105,2205)
+gui.SS_Form1.lvwSalesman.enabled(True)
+gui.SS_Form1.lvwSalesman.borderstyle(1)
+gui.SS_Form1.lvwSalesman.fontname("Arial")
+gui.SS_Form1.lvwSalesman.fontsize(8)
+gui.SS_Form1.lvwLocation.create(listview)
+gui.SS_Form1.lvwLocation.view(3)
+gui.SS_Form1.lvwLocation.addlistviewcolumn("Location",2150,0)
+gui.SS_Form1.lvwLocation.visible(True)
+gui.SS_Form1.lvwLocation.size(2250,1995)
+gui.SS_Form1.lvwLocation.zorder(0)
+gui.SS_Form1.lvwLocation.position(105,5145)
+gui.SS_Form1.lvwLocation.enabled(True)
+gui.SS_Form1.lvwLocation.borderstyle(1)
+gui.SS_Form1.lvwLocation.fontname("Arial")
+gui.SS_Form1.lvwLocation.fontsize(8)
+gui.SS_Form1.lbl_ddlStatus.create(label,"Status",True,1800,195,1,105,780,True,0,Arial,8,-2147483633,0)
+gui.SS_Form1.lbl_ddlStatus.defaultvalue("")
+gui.SS_Form1.lbl_ddlStatus.controlgroup(0)
+gui.SS_Form1.ddlStatus.create(dropdownlist)
+gui.SS_Form1.ddlStatus.visible(True)
+gui.SS_Form1.ddlStatus.size(765,330)
+gui.SS_Form1.ddlStatus.zorder(0)
+gui.SS_Form1.ddlStatus.position(105,1035)
+gui.SS_Form1.ddlStatus.enabled(True)
+gui.SS_Form1.ddlStatus.fontname("Arial")
+gui.SS_Form1.ddlStatus.fontsize(8)
+gui.SS_Form1.ddlStatus.defaultvalue("")
+gui.SS_Form1.ddlStatus.controlgroup(0)
+gui.SS_Form1.cmdRefresh.create(button)
+gui.SS_Form1.cmdRefresh.caption("Refresh")
+gui.SS_Form1.cmdRefresh.visible(True)
+gui.SS_Form1.cmdRefresh.size(1005,360)
+gui.SS_Form1.cmdRefresh.zorder(0)
+gui.SS_Form1.cmdRefresh.position(100,7350)
+gui.SS_Form1.cmdRefresh.enabled(True)
+gui.SS_Form1.cmdRefresh.fontname("Arial")
+gui.SS_Form1.cmdRefresh.fontsize(8)
+gui.SS_Form1.cmdRefresh.event(click,cmdrefresh_click)
+gui.SS_Form1.cmdRefresh.defaultvalue("")
+gui.SS_Form1.cmdRefresh.controlgroup(0)
+gui.SS_Form1.cmdLocation.create(button)
+gui.SS_Form1.cmdLocation.caption("^")
+gui.SS_Form1.cmdLocation.visible(True)
+gui.SS_Form1.cmdLocation.size(330,330)
+gui.SS_Form1.cmdLocation.zorder(0)
+gui.SS_Form1.cmdLocation.position(1995,4725)
+gui.SS_Form1.cmdLocation.enabled(True)
+gui.SS_Form1.cmdLocation.fontname("Arial")
+gui.SS_Form1.cmdLocation.fontsize(8)
+gui.SS_Form1.cmdLocation.event(click,cmdlocation_click)
+gui.SS_Form1.cmdLocation.defaultvalue("")
+gui.SS_Form1.cmdLocation.controlgroup(0)
+gui.SS_Form1.dtpQteDateEnd.create(datepicker)
+gui.SS_Form1.dtpQteDateEnd.visible(True)
+gui.SS_Form1.dtpQteDateEnd.size(1935,270)
+gui.SS_Form1.dtpQteDateEnd.zorder(0)
+gui.SS_Form1.dtpQteDateEnd.position(2310,420)
+gui.SS_Form1.dtpQteDateEnd.enabled(True)
+gui.SS_Form1.dtpQteDateEnd.checkbox(False)
+gui.SS_Form1.dtpQteDateEnd.defaultvalue("")
+gui.SS_Form1.dtpQteDateEnd.controlgroup(0)
+gui.SS_Form1.dtpQteDateStart.create(datepicker)
+gui.SS_Form1.dtpQteDateStart.visible(True)
+gui.SS_Form1.dtpQteDateStart.size(1935,270)
+gui.SS_Form1.dtpQteDateStart.zorder(0)
+gui.SS_Form1.dtpQteDateStart.position(105,420)
+gui.SS_Form1.dtpQteDateStart.enabled(True)
+gui.SS_Form1.dtpQteDateStart.checkbox(False)
+gui.SS_Form1.dtpQteDateStart.defaultvalue("")
+gui.SS_Form1.dtpQteDateStart.controlgroup(0)
+gui.SS_Form1.lbl5.create(label,"Quote Date Start",True,1935,255,1,100,210,True,0,Arial,8,-2147483633,0)
+gui.SS_Form1.lbl5.defaultvalue("")
+gui.SS_Form1.lbl5.controlgroup(0)
+gui.SS_Form1.lbl6.create(label,"Quote Date End",True,1935,255,1,2325,210,True,0,Arial,8,-2147483633,0)
+gui.SS_Form1.lbl6.defaultvalue("")
+gui.SS_Form1.lbl6.controlgroup(0)
+gui.SS_Form1.gsfgSalesmanDlls.create(gsflexgrid)
+gui.SS_Form1.gsfgSalesmanDlls.FixedRows(0)
+gui.SS_Form1.gsfgSalesmanDlls.FixedCols(0)
+gui.SS_Form1.gsfgSalesmanDlls.visible(True)
+gui.SS_Form1.gsfgSalesmanDlls.size(4935,5475)
+gui.SS_Form1.gsfgSalesmanDlls.zorder(0)
+gui.SS_Form1.gsfgSalesmanDlls.position(11565,210)
+gui.SS_Form1.gsfgSalesmanDlls.enabled(True)
+gui.SS_Form1.gsfgLocDollars.create(gsflexgrid)
+gui.SS_Form1.gsfgLocDollars.FixedRows(0)
+gui.SS_Form1.gsfgLocDollars.FixedCols(0)
+gui.SS_Form1.gsfgLocDollars.visible(True)
+gui.SS_Form1.gsfgLocDollars.size(4935,5475)
+gui.SS_Form1.gsfgLocDollars.zorder(0)
+gui.SS_Form1.gsfgLocDollars.position(16575,210)
+gui.SS_Form1.gsfgLocDollars.enabled(True)
+gui.SS_Form1.gsfgQuoteLines.create(gsflexgrid)
+gui.SS_Form1.gsfgQuoteLines.FixedRows(0)
+gui.SS_Form1.gsfgQuoteLines.FixedCols(0)
+gui.SS_Form1.gsfgQuoteLines.visible(True)
+gui.SS_Form1.gsfgQuoteLines.size(17745,7080)
+gui.SS_Form1.gsfgQuoteLines.zorder(0)
+gui.SS_Form1.gsfgQuoteLines.position(3720,5985)
+gui.SS_Form1.gsfgQuoteLines.enabled(True)
+gui.SS_Form1.gsfgQuoteLines.event(posttextmatrix,gsfgquotelines_posttextmatrix)
+gui.SS_Form1.pbChart.create(picturebox)
+gui.SS_Form1.pbChart.size(6840,5400)
+gui.SS_Form1.pbChart.zorder(0)
+gui.SS_Form1.pbChart.position(4515,315)
+gui.SS_Form1.pbChart.enabled(True)
+gui.SS_Form1.pbChart.fontname("Arial")
+gui.SS_Form1.pbChart.fontsize(7)
+gui.SS_Form1.pbChart.BackColor(16777215)
+gui.SS_Form1.cmdPrint.create(button)
+gui.SS_Form1.cmdPrint.caption("Print")
+gui.SS_Form1.cmdPrint.visible(True)
+gui.SS_Form1.cmdPrint.size(1005,360)
+gui.SS_Form1.cmdPrint.zorder(0)
+gui.SS_Form1.cmdPrint.position(100,7745)
+gui.SS_Form1.cmdPrint.enabled(True)
+gui.SS_Form1.cmdPrint.fontname("Arial")
+gui.SS_Form1.cmdPrint.fontsize(8)
+gui.SS_Form1.cmdPrint.event(click,cmdprint_click)
+gui.SS_Form1.cmdPrint.defaultvalue("")
+gui.SS_Form1.cmdPrint.controlgroup(0)
+gui.SS_Form1.dtpQteDateStart.tabstop(True)
+gui.SS_Form1.dtpQteDateStart.tabindex(1)
+gui.SS_Form1.dtpQteDateEnd.tabstop(True)
+gui.SS_Form1.dtpQteDateEnd.tabindex(2)
+gui.SS_Form1.ddlStatus.tabstop(True)
+gui.SS_Form1.ddlStatus.tabindex(3)
+gui.SS_Form1.txtSalesman.tabstop(True)
+gui.SS_Form1.txtSalesman.tabindex(4)
+gui.SS_Form1.cmd_txtSalesman.tabstop(True)
+gui.SS_Form1.cmd_txtSalesman.tabindex(5)
+gui.SS_Form1.cmdAddS.tabstop(True)
+gui.SS_Form1.cmdAddS.tabindex(6)
+gui.SS_Form1.txtLoc.tabstop(True)
+gui.SS_Form1.txtLoc.tabindex(7)
+gui.SS_Form1.cmdLocation.tabstop(True)
+gui.SS_Form1.cmdLocation.tabindex(8)
+gui.SS_Form1.cmdAddL.tabstop(True)
+gui.SS_Form1.cmdAddL.tabindex(9)
+gui.SS_Form1.cmdRefresh.tabstop(True)
+gui.SS_Form1.cmdRefresh.tabindex(10)
+gui.SS_Form1.cmdPrint.tabstop(True)
+gui.SS_Form1.cmdPrint.tabindex(11)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Variable.UDT.uMain.Define("BIRUNID",String)
+Variable.UDT.uMain.Define("TRMNL",String)
+Variable.UDT.uMain.Define("QUOTE_NO",String,QUOTE_NO)
+Variable.UDT.uMain.Define("QUOTE_LINE",String,Record_NO)
+Variable.UDT.uMain.Define("CUSTOMER",String,CUSTOMER)
+Variable.UDT.uMain.Define("NAME_CUSTOMER",String,Name_Customer)
+Variable.UDT.uMain.Define("SALESPERSON",String,SALESPERSON)
+Variable.UDT.uMain.Define("EXTENSION",Float,Dollars_Quoted)
+Variable.UDT.uMain.Define("FLAG_STATUS",String,QUOTE_WON)
+Variable.UDT.uMain.Define("COMMENTS",String,USER_1)
+Variable.UDT.uMain.Define("SalesPerson_CODE",String,SALESPERSON_CODE)
+Variable.uGlobal.uMain.Declare("uMain")
+
+Variable.UDT.uDollars.Define("BIRUNID",String)
+Variable.UDT.uDollars.Define("TRMNL",String)
+Variable.UDT.uDollars.Define("Quote_Won",String,Quote_Won)
+Variable.UDT.uDollars.Define("Dollars_Quoted",Float,Dollars_Quoted)
+Variable.uGlobal.uDollars.Declare("uDollars")
+
+Variable.UDT.uSalesmanD.Define("BIRUNID",String)
+Variable.UDT.uSalesmanD.Define("TRMNL",String)
+Variable.UDT.uSalesmanD.Define("Salesperson",String,Salesperson)
+Variable.UDT.uSalesmanD.Define("DOLLARS_QUOTED",Float,Dollars_Quoted)
+Variable.UDT.uSalesmanD.Define("SALESPERSON_CODE",String,SALESPERSON_CODE)
+Variable.uGlobal.uSalesmanD.Declare("uSalesmanD")
+
+Variable.UDT.uLocationD.Define("BIRUNID",String)
+Variable.UDT.uLocationD.Define("TRMNL",String)
+Variable.UDT.uLocationD.Define("Location",String,Location)
+Variable.UDT.uLocationD.Define("DOLLARS_QUOTED",Float,Dollars_Quoted)
+Variable.UDT.uLocationD.Define("Location_Code",String,Location_Code)
+Variable.uGlobal.uLocationD.Declare("uLocationD")
+Variable.Global.iLocKey.Declare(Long,0)
+Variable.Global.iSalesKey.Declare(Long,0)
+Variable.Global.bChartExists.Declare(Boolean,False)
+Variable.Global.iUB.Declare(Long,0)
+Variable.Global.sCust_ID_Security.Declare(String)
+Program.Sub.Preflight.End
+
+program.sub.main.start
+ F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sYear.Declare(String)
+'refer to project detail section
+'Quote 6230 Rev 1
+'3/6/15
+F.ODBC.Connection!conC.OpenConnection(V.Ambient.Ccon,V.Ambient.CUser,V.Ambient.Cpass)
+
+F.ODBC.Connection!conX.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+'lock the print button
+Gui.SS_Form1.cmdPrint.Enabled(False)
+
+'initialize my udt's
+V.uGlobal.uMain.Redim(-1,-1)
+V.uGlobal.uLocationD.Redim(-1,-1)
+V.uGlobal.uSalesmanD.Redim(-1,-1)
+V.uGlobal.uDollars.Redim(-1,-1)
+'check tables
+Function.Intrinsic.Control.CallSub(Check_tables)
+
+'call buildstyles
+Function.Intrinsic.Control.CallSub(Buildstyle)
+
+'build our dll.
+Gui.SS_Form1.ddlStatus.AddItem(" ")
+Gui.SS_Form1.ddlStatus.AddItem("C")
+Gui.SS_Form1.ddlStatus.AddItem("O")
+Gui.SS_Form1.ddlStatus.AddItem("L")
+Gui.SS_Form1.ddlStatus.AddItem("W")
+
+'default our date information
+Gui.SS_Form1.dtpQteDateEnd.Value(V.Ambient.Date)
+'get our beginning of year...
+'get our year
+F.Intrinsic.Date.Year(V.Ambient.date,V.Local.sYear)
+'concat this together to make our first of year based on ouyr year then set this thing to the beg dtpo value
+F.Intrinsic.String.Build("01/01/{0}",V.Local.sYear,V.Local.sYear)
+Gui.SS_Form1.dtpQteDateStart.Value(V.Local.sYear)
+
+Gui.SS_Form1..Show
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4016_Open_Quotes_Dshbrd.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	Function.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+program.sub.main.end
+
+program.sub.cmdrefresh_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdrefresh_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sStatus.Declare(String)
+V.Local.dDate_Start.Declare(Date)
+V.Local.dDate_End.Declare(Date)
+V.Local.sSalesMan.Declare(String)
+V.Local.sLocation.Declare(String)
+
+F.Intrinsic.Control.BlockEvents
+
+'clear out udt's just in case
+V.uGlobal.uMain.Redim(-1,-1)
+V.uGlobal.uLocationD.Redim(-1,-1)
+V.uGlobal.uSalesmanD.Redim(-1,-1)
+V.uGlobal.uDollars.Redim(-1,-1)
+
+Gui.SS_Form1..Enabled(False)
+F.Intrinsic.UI.InvokeWaitDialog("Loading data...","Please wait...")
+
+'this sub fires when they make a selection and click the refresh button. tis called.
+'get our salesman thats chosen else it will be none.
+F.Intrinsic.Control.CallSub(Get_salesman)
+V.Local.sSalesMan.Set(V.Args.sSalesman)
+'get our locations chosen else it will be none.
+F.Intrinsic.Control.CallSub(Get_locations)
+V.Local.sLocation.Set(V.Args.sLocation)
+
+'get our status
+V.Local.sStatus.Set(V.Screen.SS_Form1!ddlStatus.Text)
+F.Intrinsic.Control.If(V.Local.sStatus.Trim,=,"O")
+	'clear it out, if open that means it is blank in the columns.
+	V.Local.sStatus.Set("O")
+Function.Intrinsic.Control.ElseIf(V.Local.sStatus.Trim,=,"")
+		'clear it out, if open that means it is blank in the columns.
+	V.Local.sStatus.Set("")
+Function.Intrinsic.Control.EndIf
+
+V.Local.ddate_start.Set(V.Screen.SS_Form1!dtpQteDateStart.Value)
+V.Local.dDate_End.Set(V.Screen.SS_Form1!dtpQteDateEnd.Value)
+
+'check our security. If it's blank we can assume that either they are CRM supervisor or this if the first run, else we don't want to keep calling this since we already have the information.
+F.Intrinsic.Control.If(V.Global.sCust_ID_Security.Trim,=,"")
+	F.Intrinsic.Control.CallSub(Check_security)
+F.Intrinsic.Control.EndIf
+
+'populate and get our main data
+Function.Intrinsic.Control.CallSub(Populate_data,"dDate_Start",V.Local.dDate_Start.PervasiveDate,"dDate_End",V.Local.dDate_End.PervasiveDate,"sStatus",V.Local.sStatus,"sSalesman",V.Local.sSalesMan,"sLocation",V.Local.sLocation)
+
+'get our salesman data
+Function.Intrinsic.Control.CallSub(Sum_salesman,"dDate_Start",V.Local.dDate_Start.PervasiveDate,"dDate_End",V.Local.dDate_End.PervasiveDate,"sStatus",V.Local.sStatus,"sSalesman",V.Args.sSalesman,"sLocation",V.Args.sLocation)
+
+'getour locations data
+F.Intrinsic.Control.CallSub(Sum_location,"dDate_Start",V.Local.dDate_Start.PervasiveDate,"dDate_End",V.Local.dDate_End.PervasiveDate,"sStatus",V.Local.sStatus,"sLocation",V.Local.sLocation,"sSalesman",V.Args.sSalesman)
+'Function.Intrinsic.UI.Msgbox("Fin")
+
+'sum status for pie chart
+F.Intrinsic.Control.CallSub(Sum_status,"dDate_Start",V.Local.dDate_Start.PervasiveDate,"dDate_End",V.Local.dDate_End.PervasiveDate,"sStatus",V.Local.sStatus,"sSalesman",V.args.sSalesman,"sLocation",V.Args.sLocation)
+'compile chart
+Function.Intrinsic.Control.CallSub(Compile_chart)
+
+F.Intrinsic.Control.If(V.uGlobal.uMain.UBound,<,0)
+	F.Intrinsic.Control.CallSub(Buildstyle)
+	Gui.SS_Form1.pbChart.CLS
+	F.Intrinsic.UI.Msgbox("No information to display. Please check selection criteria and try again.","Selection...")
+	Gui.SS_Form1..Enabled(True)
+	F.Intrinsic.UI.CloseWaitDialog
+	F.Intrinsic.Control.unblockEvents
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+Gui.SS_Form1.gsfgLocDollars.Visible(False)
+Gui.SS_Form1.gsfgQuoteLines.Visible(False)
+Gui.SS_Form1.gsfgSalesmanDlls.Visible(False)
+Gui.SS_form1.pbChart.Visible(False)
+'load our flexgrids
+'if status is blank default it to O flag
+F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uMain!FLAG_STATUS,"",V.uGlobal.umain!FLAG_STATUS,"Open")
+F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uMain!FLAG_STATUS,"W",V.uGlobal.umain!FLAG_STATUS,"Won")
+F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uMain!FLAG_STATUS,"L",V.uGlobal.umain!FLAG_STATUS,"Lost")
+F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uMain!FLAG_STATUS,"C",V.uGlobal.umain!FLAG_STATUS,"Closed")
+Gui.SS_Form1.gsfgQuoteLines.LoadFromUDT("v.uglobal.uMain","Quote_NO*!*Quote_Line*!*Customer*!*Name_Customer*!*Salesperson*!*Extension*!*Flag_Status*!*Comments",2)
+
+Gui.SS_Form1.gsfgLocDollars.LoadFromUDT("v.uglobal.uLocationD","Location*!*Dollars_Quoted",2)
+
+Gui.SS_Form1.gsfgSalesmanDlls.LoadFromUDT("v.uglobal.uSalesmanD","Salesperson*!*Dollars_Quoted",2)
+F.Intrinsic.UI.CloseWaitDialog
+Gui.SS_Form1..Enabled(True)
+Gui.SS_Form1.gsfgLocDollars.Visible(True)
+Gui.SS_Form1.gsfgQuoteLines.Visible(True)
+Gui.SS_Form1.gsfgSalesmanDlls.Visible(True)
+Gui.SS_form1.pbChart.Visible(True)
+'enable our print button
+Gui.SS_Form1.cmdPrint.Enabled(True)
+F.Intrinsic.Control.UnBlockEvents
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdrefresh_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4016_Open_Quotes_Dshbrd.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ","Pie",V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdrefresh_click.end
+
+program.Sub.cmd_txtsalesman_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_txtsalesman_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(Long)
+V.Local.sRet.Declare(String)
+
+'salesman browser
+'titles. all it is is code and salesman.
+
+F.Intrinsic.String.Split("Code*!*Salesman Name","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("1500*!*2500","*!*",V.Local.iWidths)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("Select a SalesPerson","conX","Select Salesperson_Code, SalesPerson From Salespeople Where Key1='AR ' And Key2= 'SLM' And Salesperson_Code>'' Order By Salesperson_Code",V.Local.sTitles,V.Local.iWidths,3000,6000,V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet.Trim,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.SS_Form1.txtSalesman.Text(V.Local.sRet(0).Trim)
+	Gui.SS_Form1.cmdAddS.SetFocus
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txtsalesman_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4016_Open_Quotes_Dshbrd.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.Sub.cmd_txtsalesman_click.end
+
+program.sub.cmdadds_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdadds_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSalesman.Declare(String)
+'subroutine that fires when adding in salesman to listview
+
+V.Local.sSalesman.Set(V.Screen.SS_Form1!txtSalesman.Text)
+F.Intrinsic.Control.If(V.Local.sSalesman.Trim,=,"")
+	F.Intrinsic.UI.Msgbox("Salesman can NOT be blank.")
+	Gui.SS_Form1.txtSalesman.SetFocus
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.endif
+
+
+F.Intrinsic.Math.Add(V.Global.iSalesKey,1,V.Global.iSalesKey)
+Gui.SS_Form1.lvwSalesman.AddListItem(V.Global.iSalesKey,V.Local.sSalesman.Trim)
+Gui.SS_Form1.txtSalesman.Text("")
+Gui.SS_Form1.txtSalesman.SetFocus
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdadds_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4016_Open_Quotes_Dshbrd.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdadds_click.end
+
+program.sub.cmddeletes_click.start
+F.Intrinsic.Control.SetErrorHandler("cmddeletes_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'remove a selected item from the listview
+gui.SS_Form1.lvwSalesman.RemoveItem(V.Screen.SS_Form1!lvwSalesman.SelectedItemKey)
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmddeletes_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4016_Open_Quotes_Dshbrd.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmddeletes_click.end
+
+program.sub.cmdlocation_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdlocation_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sTitle.Declare(String)
+V.Local.iWidths.Declare(Long)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.String.Split("Location*!*Location Desc","*!*",V.Local.sTitle)
+F.Intrinsic.String.Split("1500*!*3500","*!*",V.Local.iWidths)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("Select a Location","conX","Select Location, Location_Desc From V_Locations Order By Location",V.Local.sTitle,V.Local.iWidths,4000,5000,V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet.Trim,<>,"***CANCEL***")
+	Gui.SS_Form1.txtLoc.Text(V.Local.sRet(0).Trim)
+	Gui.SS_Form1.cmdAddL.SetFocus
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdlocation_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4016_Open_Quotes_Dshbrd.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdlocation_click.end
+
+program.sub.cmdaddl_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdaddl_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sLocation.Declare(String)
+
+'subroutine that fires when adding in location to listview
+
+V.Local.sLocation.set(V.Screen.SS_Form1!txtLoc.text)
+F.Intrinsic.Control.If(V.Local.sLocation.Trim,=,"")
+	F.Intrinsic.UI.Msgbox("Location can not be blank.")
+	Gui.SS_Form1.txtLoc.SetFocus
+	Function.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Math.add(V.Global.ilockey,1,V.Global.iLocKey)
+Gui.SS_Form1.lvwLocation.AddListItem(V.Global.iLocKey,V.Local.sLocation.Trim)
+Gui.SS_Form1.txtLoc.text("")
+Gui.SS_Form1.txtLoc.SetFocus
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdaddl_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4016_Open_Quotes_Dshbrd.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdaddl_click.end
+
+program.sub.cmddeletel_click.start
+F.Intrinsic.Control.SetErrorHandler("cmddeletel_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'remove a selected item from out location browser.
+gui.SS_Form1.lvwLocation.RemoveItem(V.Screen.SS_Form1!lvwLocation.SelectedItemKey)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmddeletel_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4016_Open_Quotes_Dshbrd.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmddeletel_click.end
+
+program.sub.ss_form1_unload.start
+F.Intrinsic.Control.SetErrorHandler("ss_form1_unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.ODBC.Connection!conX.Close
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("ss_form1_unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4016_Open_Quotes_Dshbrd.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.end
+Function.Intrinsic.Control.EndIf
+
+program.sub.ss_form1_unload.end
+
+Program.Sub.Check_Tables.Start
+F.Intrinsic.Control.SetErrorHandler("Check_Tables_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+v.Local.bEx.Declare(Boolean)
+v.Local.sTables.Declare(String)
+v.Local.iC.Declare(Long)
+
+'table names to make sure all tables are created.
+F.Intrinsic.String.Split("GCG_4016_MAIN*!*GCG_4016_DOLLARS*!*GCG_4016_SP_DS*!*GCG_4016_LOC_DS","*!*",V.Local.sTables)
+F.Intrinsic.Control.For(V.Local.iC,0,V.Local.sTables.UBound,1)
+	f.ODBC.Connection!conX.TableExists(v.Local.sTables(v.Local.iC),v.Local.bEx)
+	F.Intrinsic.Control.If(V.Local.bEx,=,False)
+		F.Intrinsic.Debug.SetLA("This table wasn't found : ",V.Local.sTables(v.Local.iC))
+		F.Intrinsic.UI.Msgbox("Please verify that all tables have been created for this project.")
+		f.Intrinsic.Control.CallSub(ss_form1_unload)
+	Function.Intrinsic.Control.Endif
+F.Intrinsic.Control.Next(V.Local.iC)
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Check_Tables_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4016_Open_Quotes_Dshbrd.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.Check_Tables.End
+
+Program.Sub.Buildstyle.Start
+F.Intrinsic.Control.SetErrorHandler("Buildstyle_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iC.Declare(Long)
+Gui.SS_Form1.gsfgLocDollars.Visible(False)
+Gui.SS_Form1.gsfgQuoteLines.Visible(false)
+Gui.SS_Form1.gsfgSalesmanDlls.Visible(False)
+
+'Buildstyle for Main Flexgrid
+Gui.SS_Form1.gsfgQuoteLines.Cols(8)
+Gui.SS_Form1.gsfgQuoteLines.Rows(1)
+Gui.SS_Form1.gsfgQuoteLines.Rows(2)
+Gui.SS_Form1.gsfgQuoteLines.FixedRows(1)
+Gui.SS_Form1.gsfgQuoteLines.SetColumnPercentages(".06:.05:.07:.15:.15:.10:.10:.31")
+'Column 0
+Gui.SS_Form1.gsfgQuoteLines.TextMatrix(0,0,"Quote")
+'Style 1
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(1,0,"Fontstyle","Bold",True)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(1,0,"Type","Locked",True)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(1,0,"Format","Alignment",4)
+'Style 2
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,0,"Fontstyle","Bold",False)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,0,"Type","Locked",True)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,0,"Format","Alignment",2)
+'Column 1
+Gui.SS_Form1.gsfgQuoteLines.TextMatrix(1,0,"Line")
+'Style 1
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(1,1,"Fontstyle","Bold",True)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(1,1,"Type","Locked",True)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(1,1,"Format","Alignment",4)
+'Style 2
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,1,"Fontstyle","Bold",False)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,1,"Type","Locked",True)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,1,"Format","Alignment",2)
+
+'Column 2
+Gui.SS_Form1.gsfgQuoteLines.TextMatrix(2,0,"Customer")
+'Style 1
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(1,2,"Fontstyle","Bold",True)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(1,2,"Type","Locked",True)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(1,2,"Format","Alignment",4)
+'Style 2
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,2,"Fontstyle","Bold",False)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,2,"Type","Locked",True)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,2,"Format","Alignment",2)
+
+'Column 3
+Gui.SS_Form1.gsfgQuoteLines.TextMatrix(3,0,"Customer Name")
+'Style 1
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(1,3,"Fontstyle","Bold",True)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(1,3,"Type","Locked",True)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(1,3,"Format","Alignment",4)
+'Style 2
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,3,"Fontstyle","Bold",False)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,3,"Type","Locked",True)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,3,"Format","Alignment",2)
+
+'Column 4
+Gui.SS_Form1.gsfgQuoteLines.TextMatrix(4,0,"Salesperson")
+'Style 1
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(1,4,"Fontstyle","Bold",True)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(1,4,"Type","Locked",True)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(1,4,"Format","Alignment",4)
+'Style 2
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,4,"Fontstyle","Bold",False)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,4,"Type","Locked",True)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,4,"Format","Alignment",2)
+
+'Column 5
+Gui.SS_Form1.gsfgQuoteLines.TextMatrix(5,0,"Dollars")
+'Style 1
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(1,5,"Fontstyle","Bold",True)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(1,5,"Type","Locked",True)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(1,5,"Format","Alignment",4)
+
+
+'Style 2
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,5,"Fontstyle","Bold",False)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,5,"Type","Locked",True)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,5,"Format","Alignment",6)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,5,"Format","Mask","\$###,###,###.00")
+'Column 6
+Gui.SS_Form1.gsfgQuoteLines.TextMatrix(6,0,"Status")
+'Style 1
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(1,6,"Fontstyle","Bold",True)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(1,6,"Type","Locked",True)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(1,6,"Format","Alignment",4)
+'Style 2
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,6,"Fontstyle","Bold",False)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,6,"Type","Locked",True)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,6,"Format","Alignment",4)
+'Column 7
+Gui.SS_Form1.gsfgQuoteLines.TextMatrix(7,0,"Comments (User 1)")
+'Style 1
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(1,7,"Fontstyle","Bold",True)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(1,7,"Type","Locked",True)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(1,7,"Format","Alignment",4)
+'Style 2
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,7,"Fontstyle","Bold",False)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,7,"Type","Locked",False)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,7,"Format","Alignment",2)
+Gui.SS_Form1.gsfgQuoteLines.BuildStyle(2,7,"Format","Maxlength",30)
+
+Gui.SS_Form1.gsfgQuoteLines.ApplyStyle(0,1)
+
+Gui.SS_Form1.gsfgQuoteLines.SetProperty("ENTER",1)
+'BuildStyle For our Other Flexgrids
+'Salesman Quoted Dollars
+Gui.SS_Form1.gsfgSalesmanDlls.Cols(2)
+Gui.SS_Form1.gsfgSalesmanDlls.Rows(1)
+Gui.SS_Form1.gsfgSalesmanDlls.Rows(2)
+Gui.SS_Form1.gsfgSalesmanDlls.FixedRows(1)
+Gui.SS_Form1.gsfgSalesmanDlls.SetColumnPercentages(".54:.44")
+'Column 1
+Gui.SS_Form1.gsfgSalesmanDlls.TextMatrix(0,0,"Salesperson")
+'style 1
+Gui.SS_Form1.gsfgSalesmanDlls.BuildStyle(1,0,"Fontstyle","Bold",True)
+Gui.SS_Form1.gsfgSalesmanDlls.BuildStyle(1,0,"Type","Locked",True)
+Gui.SS_Form1.gsfgSalesmanDlls.BuildStyle(1,0,"Format","Alignment",4)
+
+'Style 2
+Gui.SS_Form1.gsfgSalesmanDlls.BuildStyle(2,0,"Fontstyle","Bold",False)
+Gui.SS_Form1.gsfgSalesmanDlls.BuildStyle(2,0,"Type","Locked",True)
+Gui.SS_Form1.gsfgSalesmanDlls.BuildStyle(2,0,"Format","Alignment",2)
+
+'Column 2
+Gui.SS_Form1.gsfgSalesmanDlls.TextMatrix(1,0,"Dollars")
+'Style 1
+Gui.SS_Form1.gsfgSalesmanDlls.BuildStyle(1,1,"Fontstyle","Bold",True)
+Gui.SS_Form1.gsfgSalesmanDlls.BuildStyle(1,1,"Type","Locked",True)
+Gui.SS_Form1.gsfgSalesmanDlls.BuildStyle(1,1,"Format","Alignment",4)
+'Style 2
+Gui.SS_Form1.gsfgSalesmanDlls.BuildStyle(2,1,"Fontstyle","Bold",False)
+Gui.SS_Form1.gsfgSalesmanDlls.BuildStyle(2,1,"Type","Locked",True)
+Gui.SS_Form1.gsfgSalesmanDlls.BuildStyle(2,1,"Format","Alignment",6)
+Gui.SS_Form1.gsfgSalesmanDlls.BuildStyle(2,1,"Format","Mask","\$###,###,###.00")
+Gui.SS_Form1.gsfgSalesmanDlls.ApplyStyle(0,1)
+
+'Location Quoted Dollars
+Gui.SS_Form1.gsfgLocDollars.Cols(2)
+Gui.SS_Form1.gsfgLocDollars.Rows(1)
+Gui.SS_Form1.gsfgLocDollars.Rows(2)
+Gui.SS_Form1.gsfgLocDollars.FixedRows(1)
+Gui.SS_Form1.gsfgLocDollars.SetColumnPercentages(".4:.58")
+'Column 1
+Gui.SS_Form1.gsfgLocDollars.TextMatrix(0,0,"Branch")
+'style 1
+Gui.SS_Form1.gsfgLocDollars.BuildStyle(1,0,"Fontstyle","Bold",True)
+Gui.SS_Form1.gsfgLocDollars.BuildStyle(1,0,"Type","Locked",True)
+Gui.SS_Form1.gsfgLocDollars.BuildStyle(1,0,"Format","Alignment",4)
+
+'Style 2
+Gui.SS_Form1.gsfgLocDollars.BuildStyle(2,0,"Fontstyle","Bold",False)
+Gui.SS_Form1.gsfgLocDollars.BuildStyle(2,0,"Type","Locked",True)
+Gui.SS_Form1.gsfgLocDollars.BuildStyle(2,0,"Format","Alignment",2)
+
+'Column 2
+Gui.SS_Form1.gsfgLocDollars.TextMatrix(1,0,"Dollars")
+'Style 1
+Gui.SS_Form1.gsfgLocDollars.BuildStyle(1,1,"Fontstyle","Bold",True)
+Gui.SS_Form1.gsfgLocDollars.BuildStyle(1,1,"Type","Locked",True)
+Gui.SS_Form1.gsfgLocDollars.BuildStyle(1,1,"Format","Alignment",4)
+'Style 2
+Gui.SS_Form1.gsfgLocDollars.BuildStyle(2,1,"Fontstyle","Bold",False)
+Gui.SS_Form1.gsfgLocDollars.BuildStyle(2,1,"Type","Locked",True)
+Gui.SS_Form1.gsfgLocDollars.BuildStyle(2,1,"Format","Alignment",6)
+Gui.SS_Form1.gsfgLocDollars.BuildStyle(2,1,"Format","Mask","\$###,###,###.00")
+
+Gui.SS_Form1.gsfgLocDollars.ApplyStyle(0,1)
+
+Gui.SS_Form1.gsfgLocDollars.Visible(True)
+Gui.SS_Form1.gsfgQuoteLines.Visible(True)
+Gui.SS_Form1.gsfgSalesmanDlls.Visible(True)
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Buildstyle_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4016_Open_Quotes_Dshbrd.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Buildstyle.End
+
+Program.Sub.Populate_Data.Start
+F.Intrinsic.Control.SetErrorHandler("Populate_Data_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSQL.Declare(String)
+
+V.Local.sSQL.Set("Select QL.Quote_NO, QL.Record_NO,QL.Customer,C.Name_Customer,QH.SalesPerson As Salesperson_Code,S.Salesperson,QL.Qty_Quoted * QL.Price As Dollars_Quoted,QL.Quote_Won,QL.User_1 From V_Quote_Lines AS QL Left Join V_Quote_Header As QH ON QL.Quote_NO = QH.Quote_NO Left Join V_Salespeople As S On QH.Salesperson=S.Salesperson_Code Left Join V_Customer_Master As C On QL.Customer = C.Customer")
+
+'build upon our selection criteria to our stuff.
+F.Intrinsic.String.Build("{0} Where QH.Date_Quote Between '{1}' And '{2}'",v.Local.sSQL,v.args.dDate_Start.PervasiveDate,v.args.dDate_End.PervasiveDate,v.Local.sSQL)
+
+'add in our customer security for CRM.
+F.Intrinsic.Control.If(V.Global.sCust_ID_Security.Trim,<>,"")
+	F.Intrinsic.String.Build("{0} And QH.Customer In ({1})",V.Local.sSQL,V.Global.sCust_ID_Security,V.Local.sSQL)
+F.Intrinsic.Control.EndIf
+
+Function.Intrinsic.Control.If(V.Args.sStatus.Trim,=,"O")
+	F.Intrinsic.String.Build("{0} And QL.Quote_Won = '{1}'",V.Local.sSQL,"",V.Local.sSQL)
+F.Intrinsic.Control.ElseIf(V.args.sStatus.Trim,<>,"")
+	F.Intrinsic.String.Build("{0} And QL.Quote_Won = '{1}'",V.Local.sSQL,V.args.sStatus,V.Local.sSQL)
+F.Intrinsic.Control.endif
+
+F.Intrinsic.Control.If(V.args.sSalesMan.Trim,<>,"")
+	F.Intrinsic.String.Build("{0} And QH.Salesperson In({1})",V.Local.sSQL,V.args.sSalesMan,V.Local.sSQL)
+Function.Intrinsic.Control.EndIf
+
+Function.Intrinsic.Control.If(V.args.sLocation.Trim,<>,"")
+	Function.Intrinsic.String.Build("{0} And QL.Location In({1})",V.Local.sSQL,V.args.sLocation,V.Local.sSQL)
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Build("{0} Order By QL.Quote_NO,QL.Record_NO",V.Local.sSQL,V.Local.sSQL)
+
+'open recordset then place this one into our main udt.
+F.ODBC.Connection!conX.OpenLocalRecordsetRO("RST",V.Local.sSQL)
+F.Intrinsic.Control.If(V.ODBC.conx!RST.EOF,<>,True)
+	'load into udt
+	F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rst","v.uglobal.uMain",False)
+Function.Intrinsic.Control.EndIf
+F.ODBC.conX!RST.Close
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Populate_Data_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4016_Open_Quotes_Dshbrd.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Populate_Data.End
+
+Program.Sub.Get_Salesman.Start
+F.Intrinsic.Control.SetErrorHandler("Get_Salesman_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSalesMan.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.sRows.Declare(String)
+V.Local.sItem.Declare(String)
+V.Local.iOrd.Declare(Long)
+
+
+
+
+
+'spin through our salesman listview.
+Gui.SS_Form1.lvwSalesman.RetrieveAllListItems(v.Local.sRows)
+F.Intrinsic.Control.If(v.Local.sRows.Trim,<>,"***NORETURN***")
+	Function.Intrinsic.String.Split(v.Local.sRows,"*!*",v.Local.sRows)
+	V.Local.sSalesMan.Redim(0,v.Local.sRows.UBound)
+	F.Intrinsic.Control.For(v.Local.iC,0,v.Local.sRows.UBound,1)
+		'we are going to grab it and contain it within single quotes for sq
+		Gui.SS_Form1.lvwSalesman.RetrieveItemOrdinal(v.Local.sRows(v.Local.iC).Trim,v.Local.iOrd)
+		V.Local.sItem.Set(v.Screen.SS_Form1!lvwSalesman.ListItemText(v.Local.iOrd))
+		F.Intrinsic.String.Build("'{0}'",v.Local.sItem.Trim,v.Local.sSalesMan(v.Local.iC).Trim)
+	F.Intrinsic.Control.Next(V.Local.iC)
+F.Intrinsic.Control.Else
+	V.Local.sSalesMan.Set("")
+F.Intrinsic.Control.EndIf
+Function.Intrinsic.String.Join(V.Local.sSalesMan,",",V.Local.sSalesMan)
+
+Function.Intrinsic.Variable.AddRV("sSalesman",V.Local.sSalesMan)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Get_Salesman_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4016_Open_Quotes_Dshbrd.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Get_Salesman.End
+
+Program.Sub.Get_Locations.Start
+F.Intrinsic.Control.SetErrorHandler("Get_Locations_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sLocation.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.sRows.Declare(String)
+V.Local.sItem.Declare(String)
+V.Local.iOrd.Declare(Long)
+
+'spin through location listview
+Gui.SS_Form1.lvwLocation.RetrieveAllListItems(v.Local.sRows)
+F.Intrinsic.Control.If(v.Local.sRows.trim,<>,"***NORETURN***")
+	Function.Intrinsic.String.Split(v.Local.sRows,"*!*",v.Local.sRows)
+	V.Local.sLocation.Redim(0,v.Local.sRows.UBound)
+	F.Intrinsic.Control.For(v.Local.iC,0,v.Local.sRows.UBound,1)
+		Gui.SS_Form1.lvwLocation.RetrieveItemOrdinal(v.Local.sRows(v.Local.iC).Trim,v.Local.iOrd)
+		V.Local.sItem.Set(v.Screen.SS_Form1!lvwLocation.ListItemText(v.Local.iOrd))
+		F.Intrinsic.String.Build("'{0}'",v.Local.sItem,v.Local.sLocation(v.Local.iC).Trim)
+	F.Intrinsic.Control.Next(V.Local.iC)
+F.Intrinsic.Control.Else
+	V.Local.sLocation.Set("")
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.Join(V.Local.sLocation,",",V.Local.sLocation)
+
+F.Intrinsic.Variable.AddRV("sLocation",V.Local.sLocation)
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Get_Locations_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4016_Open_Quotes_Dshbrd.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Get_Locations.End
+
+Program.Sub.Sum_Salesman.Start
+F.Intrinsic.Control.SetErrorHandler("Sum_Salesman_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSQl.Declare(String)
+
+
+V.Local.sSQl.Set("Select QH.Salesperson As SalesPerson_Code,S.Salesperson, Sum(QL.Qty_Quoted * QL.Price) As Dollars_Quoted From V_Quote_Lines As QL Left Join V_Quote_Header AS QH On QL.Quote_NO = QH.Quote_NO Left Join V_Salespeople As S On QH.Salesperson = S.Salesperson_Code")
+
+Function.Intrinsic.String.Build("{0} Where QH.Date_Quote Between '{1}' And '{2}'",V.Local.sSQl,V.Args.dDate_Start,V.Args.dDate_End,V.Local.sSQl)
+
+'add in our customer security for CRM.
+F.Intrinsic.Control.If(V.Global.sCust_ID_Security.Trim,<>,"")
+	F.Intrinsic.String.Build("{0} And QH.Customer In ({1})",V.Local.sSQL,V.Global.sCust_ID_Security,V.Local.sSQL)
+F.Intrinsic.Control.EndIf
+
+Function.Intrinsic.Control.If(V.Args.sStatus.Trim,=,"O")
+	F.Intrinsic.String.Build("{0} And QL.Quote_Won = '{1}'",V.Local.sSQL,"",V.Local.sSQL)
+F.Intrinsic.Control.ElseIf(V.args.sStatus.Trim,<>,"")
+	F.Intrinsic.String.Build("{0} And QL.Quote_Won = '{1}'",V.Local.sSQL,V.args.sStatus,V.Local.sSQL)
+F.Intrinsic.Control.endif
+
+
+Function.Intrinsic.Control.If(V.Args.sSalesman.trim,<>,"")
+	Function.Intrinsic.String.Build("{0} And QH.Salesperson In ({1})",V.Local.ssql,V.Args.sSalesman,V.Local.sSQl)
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Args.slocation.trim,<>,"")
+	F.Intrinsic.String.Build("{0} And QL.Location In({1})",V.Local.sSQl,V.Args.sLocation,V.Local.sSQl)
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Build("{0} Group By QH.Salesperson,S.Salesperson Order By QH.Salesperson",V.Local.sSQl,V.Local.sSQl)
+
+F.Intrinsic.Debug.Stop
+
+F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst",V.Local.sSQl)
+
+'set field reference
+F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,<>,True)
+	Function.Intrinsic.Variable.LoadUDTFromRecordset("conx","rst","v.uglobal.uSalesmanD",False)
+Function.Intrinsic.Control.EndIf
+
+F.ODBC.conX!rst.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sum_Salesman_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4016_Open_Quotes_Dshbrd.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Sum_Salesman.End
+
+Program.Sub.Sum_Status.Start
+F.Intrinsic.Control.SetErrorHandler("Sum_Status_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSQL.Declare(String)
+'V.Local.sFlag.Declare(String)
+'V.Local.sRet.Declare(String)
+'V.Local.i.Declare(Long)
+
+
+'open flag is batched up so it' going to be blank
+'F.Intrinsic.String.Split("*!*W*!*L*!*C","*!*",V.Local.sFlag)
+
+
+V.Local.sSQL.Set("Select QL.Quote_Won,Sum(QL.Qty_Quoted * QL.Price) As Dollars_Quoted From V_Quote_Lines As QL Left Join V_Quote_Header As QH On Ql.Quote_No = QH.Quote_NO")
+
+Function.Intrinsic.String.Build("{0} Where QH.Date_Quote Between '{1}' And '{2}'",V.Local.sSQl,V.Args.dDate_Start,V.Args.dDate_End,V.Local.sSQL)
+
+'add in our customer security for CRM.
+F.Intrinsic.Control.If(V.Global.sCust_ID_Security.Trim,<>,"")
+	F.Intrinsic.String.Build("{0} And QH.Customer In ({1})",V.Local.sSQL,V.Global.sCust_ID_Security,V.Local.sSQL)
+F.Intrinsic.Control.EndIf
+
+Function.Intrinsic.Control.If(V.Args.sStatus.Trim,=,"O")
+	F.Intrinsic.String.Build("{0} And QL.Quote_Won = '{1}'",V.Local.sSQL,"",V.Local.sSQL)
+F.Intrinsic.Control.ElseIf(V.args.sStatus.Trim,<>,"")
+	F.Intrinsic.String.Build("{0} And QL.Quote_Won = '{1}'",V.Local.sSQL,V.args.sStatus,V.Local.sSQL)
+F.Intrinsic.Control.endif
+
+F.Intrinsic.Control.If(V.Args.sSalesman.Trim,<>,"")
+	Function.Intrinsic.String.Build("{0} And QH.Salesperson In ({1})",V.Local.sSQl,V.Args.sSalesman,V.Local.sSQL)
+Function.Intrinsic.Control.EndIf
+
+Function.Intrinsic.Control.If(V.Args.sLocation.Trim,<>,"")
+	Function.Intrinsic.String.Build("{0} And QL.Location In ({1})",V.Local.sSQl,V.Args.sLocation,V.Local.sSQL)
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Build("{0} Group By QL.Quote_Won",V.Local.sSQL,V.Local.sSQL)
+
+F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+Function.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,<>,True)
+	F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rst","v.uglobal.uDollars",False)
+Function.Intrinsic.Control.EndIf
+
+
+
+F.ODBC.conX!rst.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sum_Status_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4016_Open_Quotes_Dshbrd.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Sum_Status.End
+
+Program.Sub.Sum_Location.Start
+F.Intrinsic.Control.SetErrorHandler("Sum_Location_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSQL.Declare(String)
+
+V.Local.ssql.Set("Select QL.Location As Location_Code,L.Location_Desc As Location, Sum(QL.Qty_Quoted * QL.Price) As Dollars_Quoted From V_Quote_Lines As QL Left Join V_Quote_Header AS QH On QL.Quote_NO = QH.Quote_NO Left Join V_Locations As L On Ql.Location=L.Location")
+
+F.Intrinsic.String.Build("{0} Where QH.Date_Quote Between '{1}' And '{2}'",V.Local.sSql,V.Args.dDate_Start,V.Args.dDate_End,V.local.sSQL)
+
+'add in our customer security for CRM.
+F.Intrinsic.Control.If(V.Global.sCust_ID_Security.Trim,<>,"")
+	F.Intrinsic.String.Build("{0} And QH.Customer In ({1})",V.Local.sSQL,V.Global.sCust_ID_Security,V.Local.sSQL)
+F.Intrinsic.Control.EndIf
+
+
+Function.Intrinsic.Control.If(V.Args.sStatus.Trim,=,"O")
+	F.Intrinsic.String.Build("{0} And QL.Quote_Won = '{1}'",V.Local.sSQL,"",V.Local.sSQL)
+F.Intrinsic.Control.ElseIf(V.args.sStatus.Trim,<>,"")
+	F.Intrinsic.String.Build("{0} And QL.Quote_Won = '{1}'",V.Local.sSQL,V.args.sStatus,V.Local.sSQL)
+F.Intrinsic.Control.endif
+
+Function.Intrinsic.Control.If(V.Args.sSalesman.Trim,<>,"")
+	F.Intrinsic.String.Build("{0} And QH.Salesperson In ({1})",V.Local.sSQL,V.Args.ssalesman,V.Local.sSQL)
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Args.sLocation.trim,<>,"")
+	F.Intrinsic.String.Build("{0}And QL.Location In ({1})",V.Local.sSql,V.Args.sLocation,V.Local.sSQL)
+Function.Intrinsic.Control.EndIf
+
+Function.Intrinsic.String.Build("{0} Group By Ql.Location,L.Location_Desc Order By QL.Location",V.Local.sSQL,V.Local.sSQL)
+
+F.Intrinsic.Debug.Stop
+
+
+F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,<>,True)
+	F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rst","v.uglobal.uLocationD",False)
+F.Intrinsic.Control.endif
+
+F.ODBC.conX!rst.Close
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sum_Location_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4016_Open_Quotes_Dshbrd.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Sum_Location.End
+
+Program.Sub.Compile_Chart.Start
+F.Intrinsic.Control.SetErrorHandler("Compile_Chart_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sColors.Declare(String)
+V.Local.sValues.Declare(String)
+V.Local.bEx.Declare(Boolean)
+V.Local.sPath.Declare(String)
+V.Local.sX.Declare(String)
+V.Local.sY.Declare(String)
+V.Local.fTotalSum.Declare(Float)
+V.Local.iC.Declare(Long)
+V.Local.ix.Declare(Long)
+V.Local.iY.Declare(Long)
+V.Local.iRet.Declare(String)
+V.Local.sTemp.Declare(String)
+
+F.Intrinsic.Control.If(V.uGlobal.uDollars.UBound,=,-1)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+
+'get our x values(all out statuses found")
+'sum our total while we are at it.
+'blank to be O
+F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uDollars!Quote_Won,"",V.uGlobal.uDollars!Quote_Won,"Open")
+F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uDollars!Quote_Won,"L",V.uGlobal.uDollars!Quote_Won,"Lost")
+F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uDollars!Quote_Won,"C",V.uGlobal.uDollars!Quote_Won,"Closed")
+F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uDollars!Quote_Won,"W",V.uGlobal.uDollars!Quote_Won,"Won")
+
+
+	
+F.Intrinsic.Control.For(V.Local.iC,0,V.uGlobal.uDollars.UBound,1)
+	'only ifdollars quoted is greater than zero
+	F.Intrinsic.Control.iF(V.uGlobal.uDollars!Dollars_Quoted,>,0)
+
+		Function.Intrinsic.Control.If(V.Local.sX.Trim,=,"")
+			V.Local.sX.Set(V.uGlobal.uDollars(v.Local.iC)!Quote_Won)
+		Function.Intrinsic.Control.Else
+			Function.Intrinsic.String.Build("{0}*!*{1}",V.Local.sX,V.uGlobal.uDollars(v.Local.iC)!Quote_Won,V.Local.sX)
+		Function.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.If(V.Local.sY.Trim,=,"")
+			V.Local.sY.Set(V.uGlobal.uDollars(v.Local.iC)!Dollars_Quoted)
+		Function.Intrinsic.Control.Else
+			Function.Intrinsic.String.Build("{0}*!*{1}",V.Local.sY,V.uGlobal.uDollars(v.Local.iC)!Dollars_Quoted,V.Local.sY)
+		Function.Intrinsic.Control.EndIf
+		F.Intrinsic.Math.Add(V.Local.fTotalSum,V.uGlobal.uDollars(v.Local.iC)!Dollars_Quoted,V.Local.fTotalSum)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iC)
+
+
+F.Intrinsic.String.Split(V.Local.sY,"*!*",V.Local.sY)
+'split sY then loop through converting it into a percentage
+F.Intrinsic.Control.For(V.Local.iC,0,V.Local.sY.UBound,1)
+	F.Intrinsic.Math.Div(V.Local.sY(v.Local.iC),V.Local.fTotalSum,V.Local.sY(v.local.ic))
+	F.Intrinsic.Math.Round(V.Local.sY(v.Local.iC),2,V.Local.sY(v.Local.iC))
+
+	F.Intrinsic.Math.Mult(V.Local.sY(v.Local.iC),100,V.Local.sY(v.Local.iC))
+
+F.Intrinsic.Control.Next(V.Local.iC)
+F.Intrinsic.String.Join(V.Local.sY,"*!*",V.Local.sY)
+F.Intrinsic.Debug.Stop
+
+F.Intrinsic.String.Split("-16777216|-789517|-4144960","|",V.Local.sColors)
+
+'concat x and y together and put into values
+F.Intrinsic.String.Build("{0}!*!{1}",V.Local.sX,V.Local.sY,V.Local.sValues)
+
+'split x
+Function.Intrinsic.String.Split(V.Local.sX,"*!*",V.Local.sX)
+
+Function.Intrinsic.String.Build("{0}\GABChart-{1}.bmp",V.System.Temp,"Pie",V.Local.sPath)
+F.Intrinsic.Math.Sub(V.Screen.SS_Form1!pbChart.Width,60,V.Local.ix)
+F.Intrinsic.Math.Sub(V.Screen.SS_Form1!pbChart.Height,60,V.Local.iY)
+
+F.Intrinsic.Math.div(V.Local.ix,15,V.Local.ix)
+F.Intrinsic.Math.div(V.Local.iY,15,V.Local.iY)
+
+'Create Chart
+'clear chart
+'Function.Intrinsic.Control.If(v.Global.bChartExists,=,True)
+'	F.Global.Presentation.ClearChart("Pie",v.Local.iRet)
+'	f.Global.Presentation.ClearChart("Pie","","",v.Local.iRet)
+'F.Intrinsic.Control.EndIf
+F.Global.Presentation.CreateChart("Pie",V.Local.iRet)
+V.Global.bChartExists.Set(True)
+'Title
+F.Intrinsic.String.Concat("Quote Status!*!Top!*!Arial|13!*!",V.local.scolors(0),V.local.sTemp)
+F.Global.Presentation.CreateChartMember("Pie","Title","Title1",V.Local.sTemp,V.Local.sRet)
+F.Global.Presentation.SetChartProperty("Pie","Title","Title1","Position:X","40",V.Local.sRet)
+F.Global.Presentation.SetChartProperty("Pie","Title","Title1","Position:Y","10",V.local.sret)
+
+'Chart Area
+F.Global.Presentation.SetChartProperty("Pie","ChartArea","Area3dStyle:Enable3d","True",V.Local.Sret)
+F.Global.Presentation.SetChartProperty("Pie","ChartArea","Area3dStyle:LightStyle","Realistic",V.Local.Sret)
+F.Global.Presentation.SetChartProperty("Pie","ChartArea","Area3dStyle:PointDepth","100",V.Local.Sret)
+F.Global.Presentation.SetChartProperty("Pie","ChartArea","Area3dStyle:Inclination","50",V.Local.Sret)
+F.Global.Presentation.SetChartProperty("Pie","ChartArea","Area3dStyle:Rotation","-30",V.Local.Sret)
+
+'Seris
+F.Global.Presentation.CreateChartMember("Pie","Series","Series1","Pie",V.Local.Svalues,V.Local.Sret)
+F.Global.Presentation.SetChartProperty("Pie","Series","Series1","Font","Arial|12",V.Local.Sret)
+F.Global.Presentation.SetChartProperty("Pie","Series","Series1","Palette","SeaGreen",V.Local.Sret)
+F.Global.Presentation.SetChartProperty("Pie","Series","Series1","Label","#VALX: #VAL %",V.local.sRet)
+F.Global.Presentation.SetChartProperty("Pie","Series","Series1","Item:PieLabelStyle","Disabled",V.local.sRet)
+
+'Add Legend
+F.Global.Presentation.CreateChartMember("Pie","Legend","Legend1",V.Local.Sret)
+F.Global.Presentation.SetChartProperty("Pie","Legend","Legend1","Font","Arial|12",V.Local.Sret)
+F.Global.Presentation.SetChartProperty("Pie","Legend","Legend1","BackColor",V.Local.Scolors(1),V.Local.Sret)
+F.Global.Presentation.SetChartProperty("Pie","Legend","Legend1","BorderColor",V.Local.Scolors(2),V.Local.Sret)
+
+'render
+F.Global.Presentation.RenderChart("Pie",V.Local.sPath,"True",V.Local.ix,V.Local.iY,V.Local.sRet)
+
+Function.Intrinsic.File.Exists(V.Local.sPath,V.Local.bEx)
+Function.Intrinsic.Control.If(V.Local.bEx,=,True)
+	Gui.SS_Form1.pbChart.Picture(V.Local.sPath)
+Function.Intrinsic.Control.EndIf
+
+F.Global.Presentation.ClearChart("Pie",V.Local.iRet)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Compile_Chart_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4016_Open_Quotes_Dshbrd.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ","Pie",V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Compile_Chart.End
+
+program.sub.cmdprint_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdprint_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.iLogID.Declare(Long)
+V.Local.iBIRUNID.Declare(Long)
+V.Local.iRptID.Declare(Long)
+V.Local.sTables.Declare(String)
+V.Local.sUDT.Declare(String)
+V.Local.sParam.Declare(String)
+V.Local.sVal.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.sREt.Declare(String)
+
+V.Local.sParam.Set("BIRUNID*!*TRMNL*!*DATE_START*!*DATE_END*!*USER")
+V.Local.sFlags.Declare(String)
+F.Intrinsic.String.Split("O*!*C*!*W*!*L","*!*",V.Local.sFlags)
+
+F.Intrinsic.String.Split("GCG_4016_MAIN*!*GCG_4016_LOC_DS*!*GCG_4016_SP_DS*!*GCG_4016_DOLLARS","*!*",V.Local.sTables)
+F.Intrinsic.String.Split("v.uglobal.uMain*!*v.uglobal.uLocationD*!*v.uglobal.uSalesmanD","*!*",V.Local.sUDT)
+
+F.Intrinsic.Control.If(V.uGlobal.uMain.UBound,<,0)
+	F.Intrinsic.UI.Msgbox("No information to print...please check selection criteria")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+F.Global.BI.GetIDFromName("GCG_4016_OPEN_QUOTES_DSHBRD.rpt",True,V.Local.iRptID)
+F.Intrinsic.Control.If(V.Local.iRptID,=,-1)
+	F.Intrinsic.UI.Msgbox("GCG_4016_OPEN_QUOTES_DSHBRD.rpt must be added through Report Maintenance.","Activate Report...")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Global.BI.GetRunID(V.local.iBIRUNID)
+F.Global.BI.StartLogging(V.Local.iBIRUNID,V.Local.iRptID,-1,"GCG_4016_OPEN_QUOTES_DSHBRD",V.Local.iLogID)
+F.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}",V.Local.iBIRUNID,V.Caller.Terminal,V.Screen.SS_Form1!dtpQteDateStart.Value,V.Screen.SS_Form1!dtpQteDateEnd.Value,V.Caller.user,V.Local.sVal)
+'save bi runid and terminal to UDt's
+'save bi runid and terminal to UDt's
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uMain!BIRUNID,V.local.iBIRUNID)
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uDollars!BIRUNID,V.local.iBIRUNID)
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uLocationD!BIRUNID,V.local.iBIRUNID)
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uSalesmanD!BIRUNID,V.local.iBIRUNID)
+
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uMain!BIRUNID,"BIRUNID")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uDollars!BIRUNID,"BIRUNID")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uSalesmanD!BIRUNID,"BIRUNID")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uLocationD!BIRUNID,"BIRUNID")
+
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uMain!TRMNL,V.Caller.Terminal)
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uDollars!TRMNL,V.Caller.Terminal)
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uLocationD!TRMNL,V.Caller.Terminal)
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uSalesmanD!TRMNL,V.Caller.Terminal)
+
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uMain!TRMNL,"TRMNL")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uDollars!TRMNL,"TRMNL")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uSalesmanD!TRMNL,"TRMNL")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uLocationD!TRMNL,"TRMNL")
+
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uMain!FLAG_STATUS,"FLAG_STATUS")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uMain!COMMENTS,"COMMENTS")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uMain!QUOTE_LINE,"QUOTE_LINE")
+F.Intrinsic.Variable.setudtfieldreference(V.uGlobal.uMain!EXTENSION,"EXTENSION")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uMain!SALESPERSON,"")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uMain!SALESPERSON_CODE,"SALESPERSON")
+
+
+
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uSalesmanD!Salesperson,"")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uSalesmanD!SALESPERSON_CODE,"SALESPERSON")
+
+
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uLocationD!Location,"")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uLocationD!Location_Code,"LOCATION")
+
+F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uMain!FLAG_STATUS,"Open",V.uGlobal.umain!FLAG_STATUS,"O")
+F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uMain!FLAG_STATUS,"Won",V.uGlobal.umain!FLAG_STATUS,"W")
+F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uMain!FLAG_STATUS,"Lost",V.uGlobal.umain!FLAG_STATUS,"L")
+F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uMain!FLAG_STATUS,"Closed",V.uGlobal.umain!FLAG_STATUS,"C")
+F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uDollars!Quote_Won,"Open",V.uGlobal.uDollars!Quote_Won,"O")
+F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uDollars!Quote_Won,"Lost",V.uGlobal.uDollars!Quote_Won,"L")
+F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uDollars!Quote_Won,"Closed",V.uGlobal.uDollars!Quote_Won,"C")
+F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uDollars!Quote_Won,"Won",V.uGlobal.uDollars!Quote_Won,"W")
+
+'removing any records with terminal
+F.Intrinsic.Control.For(V.Local.iC,0,V.Local.sTables.UBound,1)
+	F.Intrinsic.String.Build("Delete From {0} Where TRMNL = '{1}'",V.Local.sTables(v.Local.iC),V.Caller.Terminal,V.Local.sSql)
+	F.ODBC.Connection!conX.Execute(V.Local.sSql)
+	F.Intrinsic.Control.If(V.Local.iC,<,3)
+		'dont do the last table for the udt have to handle it differently
+		F.ODBC.Connection!conX.OpenLocalRecordsetRW("rst",V.Local.sTables(v.Local.iC))
+		F.Intrinsic.Variable.SaveUDTToRecordSet("conx","rst",V.Local.sUDT(v.Local.iC))
+		F.ODBC.conX!RST.Close
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iC)
+'make sure udt isn't blank
+F.Intrinsic.Control.If(V.uGlobal.uDollars.UBound,<>,-1)
+	'udollars udt has to be done a bit differently
+	F.Intrinsic.String.Build("Select * From GCG_4016_DOLLARS Where BIRUNID = '{0}' And TRMNL = '{1}'",V.Local.iBIRUNID,V.Caller.Terminal,V.Local.sSql)
+	F.ODBC.Connection!conX.OpenLocalRecordsetRW("rst",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.conX!RST.EOF,=,True)
+		F.ODBC.conX!RST.AddNew
+		F.ODBC.conX!RST.Set!BIRUNID(V.Local.iBIRUNID)
+		F.ODBC.conX!RST.Set!TRMNL(V.Caller.Terminal)
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.For(V.Local.iC,V.Local.sFlags.LBound,V.Local.sFlags.UBound,1)
+		F.Intrinsic.Variable.UDTMultiSeek(V.uGlobal.uDollars!Quote_Won,V.Local.sFlags(v.Local.iC),V.Local.sRet)
+		F.Intrinsic.Control.If(V.Local.sREt.Trim,<>,"")
+			F.Intrinsic.String.Split(V.Local.sREt,"*!*",V.Local.sREt)
+			'should only have 1 but just in case
+			F.Intrinsic.Control.SelectCase(V.Local.sFlags(v.Local.iC))
+				F.Intrinsic.Control.Case("O")
+					F.ODBC.conX!RST.Set!Dollars_Open(V.uGlobal.uDollars(v.Local.sREt(0))!Dollars_Quoted)
+				F.Intrinsic.Control.Case("C")
+					F.ODBC.conX!RST.Set!Dollars_Closed(V.uGlobal.uDollars(v.Local.sREt(0))!Dollars_Quoted)
+				F.Intrinsic.Control.Case("W")
+					F.ODBC.conX!RST.Set!Dollars_Won(V.uGlobal.uDollars(v.Local.sREt(0))!Dollars_Quoted)
+				F.Intrinsic.Control.Case("L")
+					F.ODBC.conX!RST.Set!Dollars_Lost(V.uGlobal.uDollars(v.Local.sREt(0))!Dollars_Quoted)
+			F.Intrinsic.Control.EndSelect
+		F.Intrinsic.Control.endif
+	F.Intrinsic.Control.Next(V.Local.iC)
+	F.ODBC.conX!RST.Update
+	F.ODBC.conX!RST.Close
+F.Intrinsic.Control.EndIf
+F.global.bi.stoplogging(V.local.ilogid)
+F.Global.BI.RunReportPreProcessor(V.Local.iBIRUNID,V.Local.iLogID,V.Local.sParam,V.Local.sVal,"GCG_4016_OPEN_QUOTES_DSHBRD",-1,False,"",-1,"",-1,"","",V.Local.iLogID)
+
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uMain!BIRUNID,"")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uDollars!BIRUNID,"")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uSalesmanD!BIRUNID,"")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uLocationD!BIRUNID,"")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uMain!TRMNL,"")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uDollars!TRMNL,"")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uSalesmanD!TRMNL,"")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uLocationD!TRMNL,"")
+
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uMain!FLAG_STATUS,"QUOTE_WON")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uMain!COMMENTS,"USER_1")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uMain!QUOTE_LINE,"RECORD_NO")
+F.Intrinsic.Variable.setudtfieldreference(V.uGlobal.uMain!EXTENSION,"DOLLARS_QUOTED")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uMain!SALESPERSON,"SALESPERSON")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uMain!SALESPERSON_CODE,"SALESPERSON_CODE")
+
+
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uSalesmanD!Salesperson,"SALESPERSON")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uSalesmanD!SALESPERSON_CODE,"SALESPERSON_CODE")
+
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uLocationD!Location,"LOCATION")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uLocationD!Location_Code,"LOCATION_CODE")
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdprint_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4016_Open_Quotes_Dshbrd.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdprint_click.end
+
+program.sub.gsfgquotelines_posttextmatrix.start
+F.Intrinsic.Control.SetErrorHandler("gsfgquotelines_posttextmatrix_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sRow.Declare(String)
+V.Local.sRet.Declare(String)
+
+'this sub will update the quote_lines table corresponding quote and line number user_1 field
+F.Intrinsic.Control.BlockEvents
+F.Intrinsic.Control.If(V.Args.key,>,0)
+	F.Intrinsic.Control.If(V.Args.column,=,7)
+		Gui.SS_Form1.gsfgQuoteLines.ReadRow(V.Args.key,V.Local.sRow)
+		F.Intrinsic.Control.If(V.Local.sRow.Trim,<>,"")
+			F.Intrinsic.String.Split(V.Local.sRow,"*!*",V.Local.sRow)
+			F.Intrinsic.String.Replace(V.Local.sRow(7).left30,"'","''",V.Local.srow(7).Trim)
+			F.Intrinsic.String.Build("Update V_Quote_Lines Set User_1 = '{0}' Where Quote_NO='{1}' And Record_NO='{2}' ",V.local.srow(7).left30,V.Local.sRow(0),V.Local.sRow(1),V.Local.sSQL)
+			F.ODBC.Connection!conX.Execute(V.Local.sSQL)
+			'set our text matrix of our row back to what is was less 30 to the left only	
+			F.Intrinsic.String.Replace(V.Local.sRow(7),"''","'",V.Local.sRow(7))
+			Gui.SS_Form1.gsfgQuoteLines.TextMatrix(V.Args.column,V.Args.key,V.Local.sRow(7).left30)
+			'update the udt as well to mirror when printing
+			F.Intrinsic.Variable.UDTMultiSeek(V.uGlobal.uMain!QUOTE_No,V.Local.sRow(0).Trim,V.uGlobal.uMain!QUOTE_LINE,V.Local.sRow(1).Trim,V.Local.sRet)
+			F.Intrinsic.Control.If(V.Local.sRet.Trim,<>,"")
+				F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+				V.uGlobal.uMain(v.Local.sRet(0))!COMMENTS.Set(V.Local.sRow(7).left30)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.control.EndIf
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.UnBlockEvents
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("gsfgquotelines_posttextmatrix_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4016_Open_Quotes_Dshbrd.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.gsfgquotelines_posttextmatrix.end
+
+Program.Sub.Check_Security.Start
+F.Intrinsic.Control.SetErrorHandler("Check_Security_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.iID.Declare(Long)
+V.Local.sGroups.Declare(String)
+V.Local.iG.Declare(Long)
+
+F.Global.Security.GetUserId(V.Caller.User,V.Caller.CompanyCode,V.Local.iID)
+
+F.Intrinsic.String.Build("Select bVal From User_Options_Com Where User_ID = '{0}' And Company = '{1}' And Option_ID = '1010'",V.Local.iID,V.Caller.CompanyCode,V.Local.sSQL)
+F.ODBC.Connection!conC.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+F.Intrinsic.Control.If(v.ODBC.conC!rst.EOF,<>,True)
+	'show what this is or not.
+	F.Intrinsic.Control.If(v.ODBC.conC!rst.FieldVal!bVal,=,True)
+		'they are CRM supervisor.
+		'exit this cause there is nothing more to do here.
+		f.ODBC.conC!rst.Close
+		F.Intrinsic.Control.ExitSub
+	Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+f.ODBC.conC!rst.Close
+
+'flag all our elements in this udt we will only unflag those that the user has access to either through group or user security
+'F.Intrinsic.Variable.UDTFlagAll(v.uGlobal.uMain)
+
+'so if we are still here they are not CRM supervisor.
+'so we have to figure out who we have access to, either through our Group level or user level.
+'lets first do groups?, then we will do
+F.Global.Security.GetUserGroups(V.Caller.User,V.Caller.CompanyCode,V.Local.sGroups)
+'here we have to do something a little bit fun.
+'split it, loop through each element adding an sql tick mark ' to beginning and end, then join it back by , as delimiter.
+F.Intrinsic.Control.If(V.Local.sGroups.Trim,<>,"")
+	Function.Intrinsic.String.Split(V.Local.sGroups,"*!*",V.Local.sGroups)
+	Function.Intrinsic.Control.For(V.Local.iG,0,V.Local.sGroups.UBound,1)
+		F.Intrinsic.String.Build("'{0}'",V.Local.sGroups(v.Local.iG).Trim,V.Local.sGroups(v.Local.iG))
+	F.Intrinsic.Control.Next(V.Local.iG)
+	'join them back
+	F.Intrinsic.String.Join(V.Local.sGroups,",",V.Local.sGroups)
+Function.Intrinsic.Control.EndIf
+
+'build our sql based on either user or group level customers.
+'then compile a select of only the customers that the user is allowed to see.
+'the global s cust securtiy will be used in conjunction with our other select statements.
+F.Intrinsic.Control.If(V.Local.sGroups.Trim,<>,"")
+	F.Intrinsic.String.Build("Select Distinct Customer From V_Customer_Master Where CRM_RES_LEV = '0' OR (CRM_RES_LEV = '1' And ASSGN_USR_GRP = '{0}') OR (CRM_RES_LEV = '2' AND ASSGN_USR_GRP IN({1}))",V.Caller.User,V.Local.sGroups,V.Local.sSQL)
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Build("Select Distinct Customer From V_Customer_Master Where CRM_RES_LEV = '0' OR (CRM_RES_LEV = '1' And ASSGN_USR_GRP = '{0}')",V.Caller.User,V.Local.sSQL)
+F.Intrinsic.Control.EndIf
+
+F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+F.Intrinsic.Control.DoUntil(V.ODBC.conX!rst.EOF,=,True)
+	F.Intrinsic.Control.If(V.Global.sCust_ID_Security.Trim,=,"")
+		F.Intrinsic.String.Build("'{0}'",V.ODBC.conX!RST.FieldValTrim!Customer,V.Global.sCust_ID_Security)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("{0},'{1}'",V.Global.sCust_ID_Security,V.ODBC.conX!RST.FieldValTrim!Customer,V.Global.sCust_ID_Security)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conx!rst.MoveNext
+F.Intrinsic.Control.Loop
+F.ODBC.conX!RST.Close
+
+'check to make sure that we have customers that we can see.
+'if we don't have any b y this point then they can't see nothing.
+F.Intrinsic.Control.If(V.Global.sCust_ID_Security.Trim,=,"")
+	F.Intrinsic.UI.Msgbox("Your lack access privileges to view this information.")
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+
+F.Intrinsic.Control.EndIf
+
+'F.Intrinsic.Debug.Stop
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Check_Security_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4016_Open_Quotes_Dshbrd.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Check_Security.End
+
+
